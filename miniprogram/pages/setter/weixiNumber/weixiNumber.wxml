@@ -1,0 +1,7 @@
+<view class="background">
+  <view class="warp">
+    <input class="text" bindinput="newweixiNumber" maxlength="18" auto-focus focus value="{{weixiNumber}}" type=""></input>
+    <text></text>
+  </view>
+  <view class="btn" catchtap="update">确认</view>
+</view>

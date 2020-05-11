@@ -1,0 +1,15 @@
+.bar{position:fixed;top: 0;left: 0;  border-bottom: 1rpx solid #E7E7E7;width: 100%;height:90rpx; text-align: center;line-height: 90rpx;background: white}
+.top{height: 96rpx; background: #F0F0F0}
+.list{display: flex; flex-direction: column}
+.list-item{width: 100%; margin: 20rpx 0; color: #2c2c2c;}
+.list-item .userhead{ margin: 10rpx; line-height: 70rpx; }
+.list-item .userhead image{height: 70rpx; width: 70rpx; border-radius: 40rpx;vertical-align:middle}
+.list-item .userhead .username{ font-size: 30rpx; margin: 10rpx;}
+.list-item .usersare{width: 100%; margin-top: 20rpx;}
+.list-item .usersare .title{margin: 20rpx 10rpx; font-size: 34rpx;}
+.list-item .usersare image{width:100%; height: 560rpx}
+.list-item .usercontent{ margin-top: 20rpx}
+.list-item .usercontent .introduction{margin:0 15rpx; overflow: hidden;word-break:break-all}
+navigator{display: inline-block }
+
+

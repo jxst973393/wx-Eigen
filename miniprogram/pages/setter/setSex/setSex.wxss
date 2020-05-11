@@ -1,0 +1,17 @@
+page, .gender{height:100%}
+.gender view{
+height: 80rpx;
+line-height: 80rpx;
+border-bottom:1rpx solid #E7E7E7; 
+padding: 0 25rpx;
+display: flex;
+justify-content: space-between;  
+background: white;
+}
+.iconicon_gou{
+  color: #04BE02;
+  font-size: 40rpx;
+}
+.gender{
+  background: #F0F0F0;
+}

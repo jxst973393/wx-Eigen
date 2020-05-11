@@ -1,0 +1,71 @@
+<!-- 不能设置为100% -->
+<!-- <scroll-view style="height:{{windowHeight}}px" scroll-y="true" scroll-into-view="{{toView}}" scroll-with-animation="true" scroll-anchoring> -->
+<!-- 设置这个后安卓出现文字不在textarea的情况，文字在页面最上方,并且会出现很多卡顿-->
+  <view class="head">
+    <view class="goUserDetail" catchtap="goUserDetail">
+      <view class="avatar">
+        <image src="{{detailItem.avatarUrl}}"  mode="aspectFill"></image>
+      </view>
+      <view class="name">
+        <text>{{detailItem.nickName}}</text>
+      </view>
+    </view>
+    <view class="follow" wx:if="{{isShow}}">
+      <text wx:if="{{isFollow}}" catchtap="goFollow" class="tofollow">关注</text>
+      <text wx:else class="followed" catchtap="cancel">取消关注</text>
+    </view>
+    <view class="follow" wx:else>
+    </view>
+      <text class="delete" wx:if="{{!isShow}}" catchtap="goDelete">删除</text>
+  </view>
+
+  <swiper indicator-dots="{{true}}" class="swiper" style="height:{{swiperHeight}}" autoplay="{{false}}" circular="{{false}}">
+    <block wx:for="{{detailItem.tempFilePaths}}" wx:key="*this">
+      <swiper-item>
+        <image mode="aspectFit" src="{{item}}" data-index="{{index}}" bindload='imgHenght'  data-imageUrl="{{item}}"></image>
+        <!-- catchtap="previewImage" -->
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="content">
+    <view class="title">{{detailItem.title}}</view>
+    <view class="time">{{time}}</view>
+    <view class="contentText" ><text space="ensp">{{detailItem.content}}</text></view>
+  </view>
+  <view class="comment" id='commentArea'>
+    <view class="commentNumber">{{detailItem.comment.length}}条评论</view>
+    <view class="full" style="min-height:{{windowHeight}}px;">
+      <view class="fullItem" wx:for="{{detailItem.comment}}" wx:key="index">
+        <image src="{{item.avatarUrl}}"></image>
+        <view class="right">
+          <text>{{item.nickName}}</text>
+          <view>{{item.content}}</view>
+        </view>
+      </view>
+      <view class="tail" id='tail'></view>
+    </view>
+  </view>
+  <!-- " -->
+  <view class="textareaWarp" style="bottom:{{keyBoardHeight}}"  wx:if="{{showTextara}}">
+  <!-- bindkeyboardheightchange="keyBoardChange"  -->
+    <textarea disable-default-padding   bindinput="input" auto-height auto-focus show-confirm-bar="{{false}}" adjust-position="{{false}}"></textarea>
+    <!--  adjust-position取消自动推起页面  -->
+    <text catchtap="send" >发送</text>
+  </view>
+  <view class="footer" wx:if="{{!hide}}">
+    <view class="icon">
+      <view class="icon-item" catchtap="addStar">
+        <view class="{{detailItem.isstar?'iconfont iconshoucang1':'iconfont iconshoucang'}}" style="font-size:{{starSize}}"></view>
+        <text class="icon-text">{{detailItem.star}}</text>
+      </view>
+      <view class="icon-item" catchtap="goComment" >
+        <view class="iconfont iconpinglun"></view>
+        <text class="icon-text">{{detailItem.comment.length}}</text>
+      </view>
+      <view class="icon-item" catchtap="addLike">
+      <view class="{{detailItem.islike?'iconfont iconaixin1':'iconfont iconaixin'}}" style="font-size:{{likeSize}}"></view>  
+        <text class="icon-text">{{detailItem.like}}</text>
+      </view>
+    </view>
+  </view>
+<!-- </scroll-view> -->

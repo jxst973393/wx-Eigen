@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/near/near",
+    "pages/message/message",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/setter/setter",
+    "pages/setter/setName/setName",
+    "pages/setter/setSex/setSex",
+    "pages/setter/weixiNumber/weixiNumber",
+    "pages/setter/setIntroduction/setIntroduction",
+    "pages/add/add",
+    "pages/userDetail/userDetail",
+    "pages/item/item",
+    "pages/follow-fan/follow-fan",
+    "pages/invitation/invitation"
+  ],
+  "window": {
+    "backgroundColor": "#F0F0F0",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F0F0F0",
+    "navigationBarTitleText": "Eigen博客",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#2D85F8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/首页.png",
+        "selectedIconPath": "images/tabbar/首页_active.png"
+      },
+      {
+        "pagePath": "pages/near/near",
+        "text": "附近",
+        "iconPath": "images/tabbar/附近.png",
+        "selectedIconPath": "images/tabbar/附近_active.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "iconPath": "images/tabbar/加.png",
+        "selectedIconPath": "images/tabbar/加_active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "信息",
+        "iconPath": "images/tabbar/信息.png",
+        "selectedIconPath": "images/tabbar/信息_active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath": "images/tabbar/我.png",
+        "selectedIconPath": "images/tabbar/我_active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

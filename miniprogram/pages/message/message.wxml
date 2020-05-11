@@ -1,0 +1,22 @@
+<view class="message">
+<view class="warp"  wx:for="{{messages}}" wx:key="index">
+  <movable-area class="area">
+    <movable-view class="view" direction="horizontal" inertia="{{true}}" >
+    <view class="left" >
+    <navigator url="{{'/pages/userDetail/userDetail?_openid='+ item._openid}}" hover-class="none">
+    <image src="{{item.avatarUrl}}" class="avatarUrl" mode="aspectFill"></image>
+    <view>
+    <view  class="name">{{item.nickName}}</view>
+    <view class="followText">{{item.messageType==='follow'?'该用户关注了你':'赞了你的作品'}}</view>
+    </view>
+    </navigator> 
+    <image class="imageUrl" src="{{item.imageUrl}}" wx:if="{{item.imageUrl}}" mode="aspectFill" data-itemindex="{{item.otherIndex}}" data-itemopenid="{{item.otherOpenid}}" catchtap="goItem"></image>
+    </view>
+    <view class="right" catchtap="goDelete" data-index="{{index}}">删除</view>
+    </movable-view>
+  </movable-area>
+</view>  
+  <view class="noData" wx:if="{{messages.length === 0}}">
+  <text>暂无信息</text>
+  </view>
+</view>

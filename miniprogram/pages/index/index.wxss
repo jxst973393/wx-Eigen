@@ -1,0 +1,52 @@
+/* miniprogram/pages/index/index.wxss */
+/* .index-swiper {
+  margin: 20rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  border: 1rpx solid ;
+}
+.index-swiper image{
+  width: 100%;
+} */
+.index-tab {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background: white;
+  border-bottom: 1rpx solid #E7E7E7;
+}
+.top{
+  height: 90rpx;
+}
+.index-tab view {
+  height: 90rpx;
+  line-height: 90rpx;
+  flex:1;
+  text-align: center;
+  color: #9E9E9E;
+} 
+.index-tab view.active {
+border-bottom: 1px solid #262626;color: #262626;
+}
+.list{display: flex; flex-direction: column}
+.list-item{width: 100%; margin: 20rpx 0; color: #2c2c2c;}
+.list-item .userhead{ margin: 10rpx; line-height: 70rpx; }
+.list-item .userhead image{height: 70rpx; width: 70rpx; border-radius: 40rpx;vertical-align:middle}
+.list-item .userhead .username{ font-size: 30rpx; margin: 10rpx;}
+.list-item .usersare{width: 100%; margin-top: 20rpx;}
+.list-item .usersare .title{margin: 20rpx 10rpx; font-size: 34rpx;}
+.list-item .usersare image{width:100%; height: 560rpx}
+.list-item .usercontent{ margin-top: 20rpx}
+.list-item .usercontent .introduction{margin:0 15rpx; overflow: hidden;word-break:break-all}
+/* .list-item .usercontent .icon{display: flex; align-items: flex-end; margin-right:15rpx; width:  270rpx}
+.icon-item{ width: 90rpx;text-align: center; float: left; overflow: hidden;}
+.icon-item .iconshoucang {font-size:58rpx;}
+.icon-item .iconpinglun {font-size:58rpx;}
+.icon-item .iconaixin {font-size:58rpx; }
+.icon-item .icon-text{font-size: 22rpx}
+.iconaixin1{font-size:58rpx; color: #EA3F49}
+.iconshoucang1{font-size:60rpx; color:#FBE74F } */
+navigator{display: inline-block }
+
+

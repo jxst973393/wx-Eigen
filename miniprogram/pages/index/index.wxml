@@ -1,0 +1,41 @@
+<wxs src="../../tool/word.wxs" module = "m1"/>
+<view class="index">
+  <view class="index-tab">
+    <view class="{{current=='like'?'active':''}}" data-current="like" bindtap="active">推荐</view>
+    <view class="{{current=='time'?'active':''}}" data-current="time" bindtap="active">最新</view>
+  </view>
+  <view class="top" ></view>
+  <view class="list">
+    <view class="list-item" wx:for="{{sumInvitation}}" wx:key="index">
+      <view class="userhead">
+        <navigator url="{{'/pages/userDetail/userDetail?_openid='+ item._openid}}" hover-class="none">
+          <image src="{{item.avatarUrl}}" mode="aspectFill" ></image>
+          <text class="username">{{item.nickName}}</text>
+        </navigator>
+      </view>
+      <!-- 传递对象用这种方法方便 -->
+      <view class="usersare" data-itemindex="{{item.index}}" data-itemopenid="{{item._openid}}" catchtap="goItem">
+        <view class="title">{{item.title}}</view>
+        <image mode="aspectFill" src="{{item.tempFilePaths[0]}}"></image>
+      </view>
+      <view class="usercontent">
+      <!-- {{m1.wordSplit(item.content)}} -->
+        <view class="introduction"><text space="ensp" >{{m1.wordSplit(item.content)}}</text></view>
+        <!-- <view class="icon">
+          <view class="icon-item" catchtap="addStar" data-item="{{item}}" data-index="{{index}}">
+            <view class="{{item.isstar?'iconfont iconshoucang1':'iconfont iconshoucang'}}"></view>
+            <text class="icon-text">{{item.star}}</text>
+          </view>
+          <view class="icon-item">
+            <view class="iconfont iconpinglun"></view>
+            <text class="icon-text">{{item.comment.length}}</text>
+          </view>
+          <view class="icon-item" catchtap="addLike" data-item="{{item}}" data-index="{{index}}">
+            <view class="{{item.islike?'iconfont iconaixin1':'iconfont iconaixin'}}"></view>
+            <text class="icon-text">{{item.like}}</text>
+          </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>

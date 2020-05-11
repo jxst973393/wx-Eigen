@@ -1,0 +1,7 @@
+<view class="background">
+  <view class="warp">
+    <input class="text" bindinput="newnickName" maxlength="10" auto-focus focus value="{{nickName}}" ></input>
+    <text></text>
+  </view>
+  <view class="btn" catchtap="update">确认</view>
+</view>

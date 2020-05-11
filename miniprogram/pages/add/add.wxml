@@ -1,0 +1,17 @@
+<view class="warp">
+  <view class="head" >
+    <view class="add" wx:for="{{tempFilePaths}}" wx:key="index">
+    <image src="{{item}}" mode="aspectFill" catchtap="previewImage" data-id="{{index}}"></image>
+    <view  class="delete iconfont iconshanchu1" catchtap="toDelete" data-id="{{index}}"></view>
+    </view>
+    <view class="add-after" catchtap="addImage" wx:if="{{imageCunt ? (imageCunt < 9 ? true : false) : true}}" >
+    <text class="iconfont iconjia1"></text>
+    </view>
+  </view>
+  <input  class="title" bindinput="setTitle"  placeholder="添加标题" maxlength="20" value="{{value}}"></input> 
+  <view class="line" ></view>
+  <textarea class="content" bindinput="setContent" maxlength="-1" placeholder="添加正文" auto-height="true" value="{{value}}" disable-default-padding></textarea>
+  <!-- <view class="local">添加地点</view> -->
+  <view class="tail"></view>
+  <view class="btnWarp"><button catchtap="go">分享</button></view>
+</view>

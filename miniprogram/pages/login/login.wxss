@@ -1,0 +1,24 @@
+.indexContainer{
+  display: flex;
+  flex-direction: column;
+
+}
+.imageBox{height: 900rpx;  display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.imageBox image{width: 150rpx; height: 150rpx; border-radius: 100%; overflow: hidden;}
+.imageBox .name{
+  margin: 10rpx;
+}
+.alter{
+  text-align: center;
+  font-size: 26rpx;
+  color: #6F7D9F;
+  margin: 20rpx;
+}
+button{
+  background: #51AA37;
+  color: white;
+  font-size: 30rpx;
+
+  width: 75%;
+}
+.noLogin{border: 1rpx solid black;}

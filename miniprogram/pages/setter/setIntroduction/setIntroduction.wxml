@@ -1,0 +1,8 @@
+<view class="background">
+  <!-- signature不是写在中间{{}} -->
+  <view class="warp">
+    <textarea class="text" bindinput="newSignature" maxlength="30" auto-focus focus value="{{signature}}"></textarea>
+    <text>{{restlength}}</text>
+  </view>
+  <view class="btn" catchtap="update">确认</view>
+</view>

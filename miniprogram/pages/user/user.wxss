@@ -1,0 +1,24 @@
+page{height: 100%}
+.user{height: 100%}
+.info{margin-bottom: 40rpx;}
+.info .head { display: flex; justify-content: space-between; margin-top:30rpx;}
+.head .left{ display: flex; flex-direction:column;margin: 30rpx 30rpx 5rpx 30rpx; position: relative;}
+.head .left text{margin: 0 auto;}
+.head .left image{width: 150rpx; height: 150rpx; border-radius:100%; overflow: hidden; }
+.head .login{width: 100%; line-height: 210rpx;}
+.head .right{ display: flex; }
+.head .right-item{flex: 1; width: 150rpx; display: flex; flex-direction: column; justify-content:flex-end; align-items: center;  margin: 30rpx 0;}
+.info .name-sex{width: 210rpx; display: flex; justify-content: center; padding: 0 20rpx; box-sizing: border-box;}
+/* .info .name-sex .name{ margin-left: 20rpx } */
+.info .brief{ padding: 10rpx 20rpx; }
+.info .wxNumber{padding: 0 20rpx; font-size: 28rpx;}
+.bar{display: flex; height: 100rpx; line-height: 100rpx; border: 1rpx solid #E7E7E7; color: #9E9E9E;}
+.bar view{flex:1; text-align: center; }
+.bar .active{border-bottom: 1px solid #262626;color: #262626;}
+.content {background: #FAFAFA; }
+
+.setter {width: 90rpx; margin: 30rpx 0; display: flex; flex-direction: column; justify-content:center; align-items: center; font-size: 45rpx}
+.left text{position: absolute; right: 0; bottom: 0; font-size: 36rpx; background:white; border-radius: 100%;  padding: 1rpx; line-height: 36rpx;}
+.iconxingbienan{color: #2D85F8; }
+.iconxingbienv{color: rgb(233, 135, 152)}
+.noLogin{border: 1rpx solid black}

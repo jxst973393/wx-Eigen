@@ -1,0 +1,24 @@
+.head {padding: 40rpx 20rpx 60rpx 20rpx}
+.head .avatar{display: flex; align-items: center;justify-content: center}
+.head .avatar .follow{ position: absolute; right: 0; top: 0;  }
+.head .avatar image{width: 150rpx;height: 150rpx;border-radius: 100%;overflow: hidden; }
+.head .avatar .imageWarp{ position: relative; width: 150rpx;}
+.head .avatar .imageWarp text{position: absolute; right: 0; bottom: 0; font-size: 36rpx; background:white; border-radius: 100%;  padding: 1rpx; line-height: 36rpx;}
+.head .name{  text-align: center }
+.head .weixiNumber{  font-size: 28rpx; text-align: center}
+.head .introduce{text-align: center}
+.head .element{ display: flex; justify-content: center;}
+.head .element .item {font-size: 28rpx; padding: 10rpx;}
+.head .element .item text{padding-right:  10rpx; }
+.bar{display: flex; height: 100rpx;  border-bottom: 1rpx solid #E7E7E7;border-top: 1rpx solid #E7E7E7;}
+.bar view{flex: 1; text-align: center; line-height:100rpx; }
+.active {
+border-bottom: 1px solid #262626;color: #262626;
+}
+.uncheck{
+color: #9E9E9E;
+}
+.icontianjia{color:#2D85F8;font-size: 40rpx; line-height: 40rpx;background: white;border-radius: 100%;}
+.iconwuuiconsuoxiao{font-size: 40rpx; line-height: 40rpx; color: rgb(247, 91, 86);background: white;border-radius: 100%}
+.iconxingbienan{color: #2D85F8; }
+.iconxingbienv{color: rgb(233, 135, 152)}

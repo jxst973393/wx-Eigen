@@ -1,0 +1,10 @@
+<view class="gender">
+  <view class="man" catchtap="changeMan">
+  <text>男</text>
+  <text  class="iconfont iconicon_gou"  wx:if="{{gender == 1}}"></text>
+  </view>
+  <view class="woman" catchtap="changeWoman" > 
+  <text>女</text>
+  <text class="iconfont iconicon_gou" wx:if="{{gender == 0}}" ></text>
+  </view>
+</view> 

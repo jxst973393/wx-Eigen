@@ -1,0 +1,9 @@
+<view class="indexContainer">
+  <view class="imageBox">
+    <image class="avatar" src="cloud://social-z0706.736f-social-z0706-1301842914/must/owAxP5YG97zwi0XtfFTCQ9f4IDGo/invitaion_0/image_1.png" class="noLogin"></image>
+    <text class="name">交友平台</text>
+  
+  </view>
+  <text class="alter">请完成微信授权以继续使用</text>
+  <button open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">    微信授权用户信息    </button>
+</view>

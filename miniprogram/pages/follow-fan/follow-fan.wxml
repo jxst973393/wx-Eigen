@@ -1,0 +1,21 @@
+<view class="follow-fan">
+<view class="bar"> 
+<text>{{type==='follows'?'关注':'粉丝'}}</text>
+</view>
+  <view class="top" ></view>
+  <view class="box" wx:for="{{list}}" wx:if="{{list.length}}">
+    <navigator class="warp" url="{{'/pages/userDetail/userDetail?_openid='+ item._openid}}" hover-class="none">
+      <image src="{{item.avatarUrl}}" mode="aspectFill"></image>
+      <view class="info">
+        <text class="name">{{item.nickName}}</text>
+      </view>
+    </navigator>
+    <view class="right">
+      <text wx:if="{{!item.isFollow}}" catchtap="goFollow" class="tofollow" data-item="{{item}}" data-index="{{index}}">关注</text>
+      <text wx:else class="followed" catchtap="cancel" data-item="{{item}}" data-index="{{index}}">取消关注</text>
+    </view>
+  </view>
+  <view class="noData" wx:if="{{list.length === 0}}">
+  <text>暂无数据</text>
+  </view>
+</view>

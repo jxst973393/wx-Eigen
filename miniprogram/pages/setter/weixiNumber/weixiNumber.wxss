@@ -1,0 +1,29 @@
+page, .background{height:100%}
+.warp{
+  position: relative;
+}
+.warp text{
+position: absolute;
+bottom:0; 
+right:0;
+margin: 20rpx;
+color: #9E9E9E;
+}
+.text{
+  width: 100%;
+  background: white;
+  padding: 20rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+}
+.background{
+  background: #F0F0F0;
+}
+.btn{
+  float: right;
+  width: 100rpx;
+  height: 50rpx;
+  text-align: center;
+  margin: 20rpx 0;
+  color: #2D85F8;
+}

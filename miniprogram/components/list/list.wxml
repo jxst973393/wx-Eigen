@@ -1,0 +1,8 @@
+<view class="list">
+<view class="list-item" wx:for="{{list}}" wx:key="index">
+      <!-- 传递对象用这种方法方便 -->
+      <view class="usersare" data-itemIndex="{{item.index}}"  data-itemOpenid="{{item._openid}}"catchtap="goItem" >
+        <image mode="aspectFill" src="{{item.tempFilePaths[0]}}"></image>
+      </view>
+    </view>
+</view>

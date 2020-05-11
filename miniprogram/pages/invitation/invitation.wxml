@@ -1,0 +1,26 @@
+<wxs src="../../tool/word.wxs" module = "m1"/>
+<view class="index">
+
+<view class="bar"> 
+<text>帖子</text>
+</view>
+  <view class="top" ></view>
+  <view class="list">
+    <view class="list-item" wx:for="{{invitations}}" wx:key="index">
+      <view class="userhead">
+        <navigator url="{{'/pages/userDetail/userDetail?_openid='+ item._openid}}" hover-class="none">
+          <image src="{{item.avatarUrl}}" mode="aspectFill" ></image>
+          <text class="username">{{item.nickName}}</text>
+        </navigator>
+      </view>
+      <!-- 传递对象用这种方法方便 -->
+      <view class="usersare" data-itemindex="{{item.index}}" data-itemopenid="{{item._openid}}" catchtap="goItem">
+        <view class="title">{{item.title}}</view>
+        <image mode="aspectFill" src="{{item.tempFilePaths[0]}}"></image>
+      </view>
+      <view class="usercontent">
+        <view class="introduction"><text space="ensp" >{{m1.wordSplit(item.content)}}</text></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+page{height: 100%; background:#F0F0F0}
+.avatar{height: 400rpx;display: flex;justify-content: center;align-items: center; flex-direction: column;border-bottom: 1rpx solid rgb(192, 190, 190); background:white}
+.avatar image{width: 180rpx;height: 180rpx;border-radius: 100%;
+overflow: hidden}
+.avatar text{margin: 20rpx 0; color: #2D85F8}
+
+.warp{display: flex; flex-direction: column; background:white}
+.warp .item{display: flex; justify-content: space-between;  align-items: center; padding: 25rpx 25rpx 25rpx 0; border-bottom: 1rpx solid rgb(192, 190, 190); margin-left:25rpx; }
+.warp .item .middle{
+  width: 100%;
+  text-align: right;
+  padding: 0 30rpx 0 0;
+}
+.warp .item view{width: 180rpx}
+.warp .weixiNumber{border-bottom: 1rpx solid rgb(192, 190, 190);padding: 25rpx;margin: 0;}
+.warp .local{border-bottom: 1rpx solid rgb(192, 190, 190);padding: 25rpx;margin: 0;border-top: 1rpx solid rgb(192, 190, 190);margin-top: 30rpx;}
+.background{background:#F0F0F0;height: 300rpx}
+.active{background:#F0F0F0}
+.local{background: white}
+.background{background:#F0F0F0}

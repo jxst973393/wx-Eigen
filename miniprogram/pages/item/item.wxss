@@ -1,0 +1,66 @@
+.head{ height: 100rpx; display: flex; 
+align-items: center; padding: 30rpx 15rpx 15rpx 15rpx; position: relative }
+.head .avatar image{width: 80rpx; height: 80rpx; overflow: hidden; border-radius: 100%; margin-right:15rpx;display: block}
+
+.head .follow{ margin-left:30rpx; }
+.head .follow .tofollow{   font-size: 30rpx; color:#4192EF}
+.head .follow .followed{ font-size: 30rpx; color: rgb(83, 76, 76);}
+.swiper {
+border-bottom: 1rpx solid #E7E7E7;
+border-top: 1rpx solid #E7E7E7;
+
+}
+.delete{position: absolute; right: 0;
+margin-right: 50rpx;color: #EA3F49;font-size: 30rpx;
+}
+/* .wrap{position: relative} */
+/* .iconshanchu1{position: absolute; right: 20rpx; top: -46rpx; color:  rgb(247, 91, 86); font-size: 45rpx; z-index: 1000;} */
+.swiper image{width: 100%;height: 100%;  }
+.content{margin-top: 30rpx;}
+.content .title{margin: 20rpx 20rpx 10rpx 20rpx;font-size: 36rpx; }
+.content .time{padding-left: 20rpx;font-size: 20rpx; color: rgb(83, 76, 76)}
+.content .contentText{margin: 20rpx;padding: 20rpx 0; margin-bottom: 40rpx; border-bottom: 1rpx solid #E7E7E7}
+.comment .commentNumber{font-size: 28rpx; color:rgb(83, 76, 76); padding-left: 20rpx;}
+.footer{position: fixed; bottom: 0; width: 100%; height: 150rpx; border-top: 1rpx solid #E7E7E7; background: white; z-index: 20;
+}
+.icon{display: flex; width:100%;justify-content: center; height: 100%;align-items: flex-start; margin-top: 20rpx}
+.icon-item{ width: 90rpx;display: flex;justify-content: center; flex: 1; align-items: center;}
+.icon-item .iconshoucang {font-size:58rpx;}
+.icon-item .iconpinglun {font-size:58rpx;}
+.icon-item .iconaixin {font-size:58rpx; }
+.icon-item .icon-text{font-size: 26rpx; margin-left: 28rpx}
+.iconaixin1{font-size:58rpx; color: #EA3F49; transition: font-size 0.2s;}
+.iconshoucang1{font-size:60rpx; color:#FBE74F;transition: font-size 0.2s;}
+.full{ margin-top:40rpx; padding: 20rpx;}
+.textareaWarp{
+  width: 100%;
+  box-sizing: border-box;
+  border-top:1rpx solid rgb(185, 185, 185);
+  
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  background: white;
+  transition:bottom 0.5s; 
+}
+.textareaWarp textarea{
+  width: 76%;
+  border:1rpx solid rgb(185, 185, 185);
+  border-radius: 40rpx;
+  padding: 25rpx;
+  height: 42rpx; 
+  /* 设置高度防止卡顿 */
+}
+.textareaWarp text{color:#4192EF;  width: 23%; height: 94rpx;text-align: center; line-height: 94rpx;}
+.full .fullItem{display: flex; font-size: 30rpx; margin-top: 20rpx}
+.full .fullItem .right{width:88%}
+.full .fullItem text{padding: 10rpx}
+.full .fullItem view{padding: 10rpx  }
+.full .fullItem image{width: 60rpx; height: 60rpx; border-radius: 100%; overflow: hidden;  }
+.full .tail{height: 240rpx;}
+.goUserDetail{display: flex; }
+.goUserDetail .name{line-height: 80rpx}
+.scroll-view{position: relative}

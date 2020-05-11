@@ -1,0 +1,53 @@
+<view class="user">
+<!-- 用户未登录 -->
+  <view class="info" wx:if="{{isShowLogin}}">
+    <view class="head">
+      <view class="left">
+        <image   src="cloud://social-z0706.736f-social-z0706-1301842914/must/owAxP5YG97zwi0XtfFTCQ9f4IDGo/invitaion_0/image_0.png" class="noLogin"></image>
+      </view>
+      <view class="login" catchtap="toLogin">登录/注册</view>
+    </view>
+  </view>
+  <!-- 用户已登录 -->
+  <view class="info" wx:else>
+    <view class="head">
+      <view class="left">
+        <image src="{{userInfo.avatarUrl}}" mode="aspectFill" catchtap="previewImage"></image>
+        
+        <text class="iconfont iconxingbienan" wx:if="{{userInfo.gender===1}}"></text>
+        <text class="iconfont iconxingbienv"wx:elif="{{userInfo.gender===0}}"></text>
+        <text  wx:else></text>
+      </view>
+      <view class="right">
+        <view class="right-item" bindtap="goInvitation">
+          <text class="number" >{{userShare.invitation.length}}</text>
+          <text class="item-name">贴子</text>
+        </view>
+         <view class="right-item"catchtap="goFollow" data-follows="{{userInfo.follows}}">
+          <text class="number">{{userInfo.follows.length}}</text>
+          <text class="item-name"  >关注</text>
+        </view>
+         <view class="right-item" catchtap="goFan" data-fans="{{userInfo.fans}}">
+          <text class="number">{{userInfo.fans.length}}</text>
+          <text class="item-name">粉丝</text>
+        </view>
+         <navigator open-type="navigate" url="/pages/setter/setter" class="setter iconfont iconyoujiantou" hover-class="none"></navigator>
+      </view>
+    </view>
+    <view class="name-sex">
+    <!-- {{userInfo.nickName}} -->
+    <text class="name">{{userInfo.nickName}}</text>
+    </view>
+    <view class="wxNumber" wx:if="{{userInfo.weixiNumber}}">微信号:{{userInfo.weixiNumber}}</view>
+    <view class="brief" wx:if="{{userInfo.signature}}">{{userInfo.signature}}</view>
+     
+  </view>
+  <view class="bar">
+    <view class="{{current=='invitation'?'active':''}}" data-current="invitation"  bindtap="active">帖子</view>
+    <view class="{{current=='storeList'?'active':''}}"  data-current="storeList" bindtap="active">收藏</view>
+    <view  class="{{current=='likeList'?'active':''}}" data-current="likeList" bindtap="active">喜欢</view>
+  </view>
+    <component-list  list="{{userShare.invitation}}"  wx:if="{{current=='invitation'}}"></component-list>
+  <component-list  list="{{userShare.storeList}}" wx:elif="{{current=='storeList'}}"></component-list>
+  <component-list  list="{{userShare.likeList}}" wx:else="{{current=='likeList'}}" ></component-list>
+</view>

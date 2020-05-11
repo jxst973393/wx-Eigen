@@ -1,0 +1,43 @@
+<view class="userDetail">
+  <view class="head">
+    <view class="avatar">
+      <view class="imageWarp">
+      <view class="follow" wx:if="{{isShow}}">
+        <view wx:if="{{isFollow}}" catchtap="goFollow" class="tofollow" class="iconfont icontianjia"></view>
+        <view wx:else class="followed" class="iconfont iconwuuiconsuoxiao" catchtap="cancel"></view> 
+      </view>
+        <image src="{{otherUser.avatarUrl}}" mode="aspectFill" catchtap="previewImage"></image>
+        <text class="iconfont iconxingbienan" wx:if="{{otherUser.gender===1}}"></text>
+        <text class="iconfont iconxingbienv" wx:elif="{{otherUser.gender===0}}"></text>
+        <text wx:else></text>
+      </view>
+      
+    </view>
+    <view class="name">
+      <text>{{otherUser.nickName}}</text>
+    </view>
+    <view class="weixiNumber" wx:if="{{otherUser.weixiNumber}}">{{otherUser.weixiNumber}}</view>
+    <view class="element">
+      <view class="item">
+        <text>帖子</text>
+        <text>{{otherShare.invitation.length}}</text>
+      </view>
+      <view class="item">
+        <text>关注</text>
+        <text>{{otherUser.follows.length}}</text>
+      </view>
+      <view class="item">
+        <text>粉丝</text>
+        <text>{{fansNumber}}</text>
+      </view>
+    </view>
+    <view class="introduce" wx:if="{{otherUser.signature}}">{{otherUser.signature}}</view>
+  </view>
+  <view class="bar">
+    <view class="invitation" class="{{current=='invitation'?'active':'uncheck'}}" data-current="invitation" bindtap="active">帖子</view>
+    <view class="like" class="{{current=='like'?'active':'uncheck'}}" data-current="like" bindtap="active">喜欢</view>
+  </view>
+  <!-- 属性不要写id _openid这样的 -->
+  <component-list list="{{otherShare.invitation}}" wx:if="{{current=='invitation'}}" enter="false"></component-list>
+  <component-list list="{{otherShare.likeList}}" wx:else enter="false"></component-list>
+</view>

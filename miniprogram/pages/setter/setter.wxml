@@ -1,0 +1,40 @@
+  <view class="avatar">
+    <image src="{{avatarUrl}}" mode="aspectFill" catchtap="previewImage"></image>
+    <text catchtap="toUpdateImag">更换头像</text>
+  </view>
+  <view class="warp">
+    <navigator open-type="navigate" url="/pages/setter/setName/setName" hover-class="active">
+      <view class="name item">
+        <view>名字</view>
+        <text class="middle">{{nickName}}</text>
+        <text class=" setter iconfont iconyoujiantou"></text>
+      </view>
+    </navigator>
+    <navigator open-type="navigate" url="/pages/setter/setSex/setSex" hover-class="active">
+      <view class="sex item" hover-class="active">
+        <view>性别</view>
+        <text class="middle">{{gender===''?'':(gender===1?'男':'女')}}</text>
+        <text class=" setter iconfont iconyoujiantou"></text>
+      </view>
+    </navigator>
+    <navigator open-type="navigate" url="/pages/setter/setIntroduction/setIntroduction" hover-class="active">
+      <view class="introduction item">
+        <view>个人简介</view>
+        <text class="middle">{{signature}}</text>
+        <text class=" setter iconfont iconyoujiantou"></text>
+      </view>
+    </navigator>
+    <navigator open-type="navigate" url="/pages/setter/weixiNumber/weixiNumber" hover-class="active">
+    <view class="weixiNumber item ">
+      <view>微信号</view>
+      <text class="middle ">{{weixiNumber}}</text>
+      <text class=" setter iconfont iconyoujiantou "></text>   
+    </view>
+     </navigator>   
+    <view class="background ">
+      <view class="local item ">
+        <view>共享位置</view>
+        <switch checked="{{isLocation}}" bindchange="toLocation"/>     
+      </view>
+    </view>
+  </view>

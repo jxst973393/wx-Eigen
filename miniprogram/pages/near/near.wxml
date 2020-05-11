@@ -1,0 +1,2 @@
+<map longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location show-compass markers="{{markers}}"  bindmarkertap="markertap"></map>
+
