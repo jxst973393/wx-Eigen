@@ -13,7 +13,7 @@ message、share、user需自己创建并权限设置“为所有用户可读，�
 
 用户登录
 用户初始进入界面需进行登录操作，获取wx用户信息
-![image](https://github.com/liu-yi-jun/wx-Eigen/blob/master/images/login.PNG)
+<img src="https://github.com/liu-yi-jun/wx-Eigen/blob/master/images/login.PNG" width="200" height="400" alt="微信小程序"/><br/>
 
 用户个人页面
 这里展示个人用户的资料信息，发布过帖子，关注的用户、粉丝的数量，以及收藏和喜欢的帖子等
